@@ -1,0 +1,22 @@
+<div class="container">
+	<h1>{{title}}</h1>
+	<table class="table table-hover">
+	<thead>
+		<tr>
+				<th>Nom</th>
+				<th>Image</th>
+				<th>Genre</th>
+		</tr>
+	</thead>
+	{{#each artistes as |artiste|}}		
+	<tbody>
+		<tr>
+			<td>{{artiste.nom}}</td>
+			<td><img src="{{artiste.image}}" alt="{{artiste.image}}"></td>
+			<td>{{artiste.id_genre}}</td>
+		</tr>
+	</tbody>
+	{{/each}}
+	</table>
+</div>
+

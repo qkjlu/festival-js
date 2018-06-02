@@ -1,0 +1,22 @@
+{{app-nav}}
+{{#each model as |festival|}}
+    <div class="col-lg-2 col-sm-4">
+        <div class="card hovercard">
+            <div class="cardheader">
+                <img alt="" src="assets/images/garorock-header.jpg">
+            </div>
+            <div class="avatar">
+                <img alt="" src="assets/images/{{festival.image}}">
+            </div>
+            <div class="info">
+                <div class="title">
+                    {{ festival.nom }}
+                </div>
+                <div class="desc">
+                    <p><strong>Nombre de festivaliers : {{festival.nbFestivaliers}}</strong></p></div>
+                <div class="desc">
+                    <p><span class="badge alert-danger"> Ville : </span> {{festival.idVille}} </p></div>
+            </div>
+        </div>
+    </div>
+{{/each}}

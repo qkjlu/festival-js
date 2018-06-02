@@ -11,15 +11,40 @@
 
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/festival-js.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     {{content-for "head-footer"}}
   </head>
   <body>
     {{content-for "body"}}
 
+
+    <script src="https://cdn.auth0.com/js/auth0/9.5.1/auth0.min.js"></script>
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/festival-js.js"></script>
 
+    <!-- <script type="text/javascript">
+      import { Auth0Lock } from 'auth0-lock';
+      var clientId = "ZvXDC1xH4soANwvzehIrdyjJL3xAnI04";
+      var domain = "festival-js.eu.auth0.com";
+      var lock = new Auth0Lock(clientId, domain);
+
+      lock.on("authenticated", function(authResult) {
+        lock.getUserInfo(authResult.accessToken, function(error, profile) {
+          if (error) {
+            // Handle error
+            return;
+          }
+
+          localStorage.setItem("accessToken", authResult.accessToken);
+          localStorage.setItem("profile", JSON.stringify(profile));
+
+          // Update DOM
+        });
+      });
+
+      lock.show();
+    </script> -->
     {{content-for "body-footer"}}
   </body>
 </html>

@@ -17,8 +17,10 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
+    "ember-bootstrap": "^1.2.2",
     "ember-cli": "~3.1.4",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.6.0",
@@ -43,5 +45,11 @@
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "dependencies": {
+    "auth0-js": "^9.6.0",
+    "auth0-lock": "^11.7.0",
+    "cors": "^2.8.4",
+    "rsvp": "^4.8.2"
   }
 }

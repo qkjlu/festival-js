@@ -1,0 +1,27 @@
+<div class="container">
+	
+	<h1>{{title}}</h1>
+	<table class="table table-hover">
+	<thead>
+		<tr>
+				<th>Nom</th>
+				<th>Image</th>
+				<th></th>
+		</tr>
+	</thead>
+	{{#each festivals as |festival|}}		
+	<tbody>
+		
+		<tr >
+			<td>{{festival.nom}}</td>
+			<td><img src="/assets/images/{{festival.image}}" alt="{{festival.image}}" width="50" height="50"></td>
+			<td>{{#link-to "festivals.details" festival}}{{#bs-button type="info"}}Détails{{/bs-button}}{{/link-to}}</td>
+			{{!-- <td>{{#bs-button type="primary"}}Modifier{{/bs-button}}</td> --}}
+		</tr>
+	
+	</tbody>
+	{{/each}}
+	</table>
+</div>
+
+
