@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('details', {path : '/:festival_id/details'}, function(){
       this.route('edit');
     });
+    this.route('create');
   });
   this.route('artistes');
   this.route('genres');
