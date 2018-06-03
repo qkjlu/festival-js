@@ -1,35 +1,43 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-			<form>
+			<form {{action 'editFestival' on="submit"}}>
 
 				<div class="form-group row ">
 					<div class="col-md-6">
 						<label for="inputNom">Nom</label>
-						<input type="text" class="form-control" id="inputNom" value="{{model.nom}}">
+						{{input value=model.nom class="form-control" type="text" id="inputNom"}}
+						
 					</div>
 				</div>
 
-
+				<div class="form-group row">
+					<div class="col-md-6">
+						<label for="inputImage">Image (URL)</label>
+						{{input value=model.image class="form-control" type="text" id="inputImage"}}
+						
+					</div>
+				</div>
 
 				<div class="form-group row">
 					<div class="col-md-6">
 						<label for="inputDateDebut">Date début</label>
-						<input type="text" class="form-control" id="inputDateDebut" value="{{model.dateDebut}}">
+						{{input value=model.dateDebut class="form-control" type="text" id="inputDateDebut"}}
+						
 					</div>
 				</div>
 
 				<div class="form-group row">
 					<div class="col-md-6">
 						<label for="inputDateFin">Date fin</label>
-						<input type="text" class="form-control" id="inputDateFin" value="{{model.dateFin}}">
+						{{input value=model.dateFin class="form-control" type="text" id="inputDateFin"}}
 					</div>
 				</div>
 
 				<div class="form-group row">
 				<div class="col-md-4">
-						<label for="inputNbParticipant">Nombre de participants</label>
-						<input type="text" id="inputNbParticipant" class="form-control" value="{{model.nbParticipant}}">
+						<label for="inputNbFestivaliers">Nombre de festivaliers</label>
+						{{input value=model.nbFestivaliers class="form-control" type="text" id="inputNbFestivaliers"}}
 					</div>
 
 					<div class="col-md-4">				

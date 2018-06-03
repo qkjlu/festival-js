@@ -4,12 +4,24 @@ export default Route.extend({
 	model(){
 		return this.store.createRecord('festival');
 	},
+
+	renderTemplate: function() {
+      this.render('festivals.create', { into: 'application' });
+  	},
+
 	actions : {
 		createFestival() {
-		      const festival = this.modelFor('festival');
-		      festival.save().then(function() {
-		        this.transitionTo('festival');
-		      })
+			  // const festival = this.get("controller.model").then(function(){
+			  // 	festival.save().then(function(){
+			  // 		this.transitionTo('festivals');
+			  // 	});
+			  // });
+		   	  //const festival = this.get('controller.model');
+		   	  //this.model().save();
+		   	  const festival = this.get("controller.model");
+		   	  festival.save();
+		   	  this.transitionTo("festivals");
+
 		    }
 	}
 });

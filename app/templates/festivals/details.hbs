@@ -12,7 +12,7 @@
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-3 col-lg-3 " align="center"> 
-							<img alt="Image festival" src="/assets/images/{{model.image}}" class="img-circle img-responsive">
+							<img alt="Image festival" src="{{model.image}}" class="img-circle img-responsive">
 						</div>
 
 
@@ -43,11 +43,11 @@
 							<i class="glyphicon glyphicon-edit"></i>
 						</button>
 					{{/link-to}}
-						
-						
-						<a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger">
+						{{model.id}}
+						<button class="btn btn-sm btn-danger" {{action "deleteFestival" model.id on="click"}}>
 							<i class="glyphicon glyphicon-remove"></i>
-						</a>
+						</button>
+						
 					</span>
 				</div>
 
