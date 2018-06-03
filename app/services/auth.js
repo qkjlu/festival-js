@@ -15,7 +15,7 @@ export default Service.extend({
     return new auth0.WebAuth({
       domain: 'festival-js.eu.auth0.com',
       clientID: 'ZvXDC1xH4soANwvzehIrdyjJL3xAnI04',
-      redirectUri: 'https://hidden-journey-26032.herokuapp.com/',
+      redirectUri: 'https://festivaljs.herokuapp.com/',
       audience: 'https://festival-js.eu.auth0.com/userinfo',
       responseType: 'token id_token',
       scope: 'openid'
