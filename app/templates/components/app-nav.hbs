@@ -8,29 +8,6 @@
 
     {{#if auth.isAuthenticated}}
     <ul class="nav navbar-nav">
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Festival
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          {{#link-to "festivals.create" class="dropdown-item"}}Créer un festival{{/link-to}}
-          {{#link-to "festivals" class="dropdown-item"}}Voir tous les festivals{{/link-to}}
-        </div>
-      </li>
-
-
-{{!--       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div> --}}
-
       <li>
       	{{#link-to "festivals" class="navbar-brand"}}Festivals{{/link-to}}
       	{{#link-to "artistes" class="navbar-brand"}}Artistes{{/link-to}}

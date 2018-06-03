@@ -1,3 +1,6 @@
 {{app-nav}}
+{{#link-to 'festivals.create'}}
+<button class="btn btn-success"> Créer un festival </button>
+{{/link-to}}
 {{festival-list title="Liste des Festivals" festivals = model}}
 {{outlet}}
